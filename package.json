@@ -1,0 +1,24 @@
+{
+  "name": "zafra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Cortes Juarez",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "mssql": "^7.3.0",
+    "nodemailer": "^6.6.3",
+    "tedious": "^11.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
