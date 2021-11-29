@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // Cargar Modulos de node para el servidor
 var express = require('express');
@@ -7,7 +7,13 @@ var express = require('express');
 var app = express();
 
 // Cargar ficheros de rutas
-var api_routes = require('./app/routes/api');
+let ajustes_routes = require('./app/routes/ajustes.routes');
+let cargadorista_routes = require('./app/routes/cargadorista.routes');
+let duenos_routes = require('./app/routes/duenos.routes');
+let credito_routes = require('./app/routes/credito.routes');
+let cuenta_routes = require('./app/routes/cuenta.routes');
+let proveedor_routes = require('./app/routes/proveedor.routes');
+let movimiento_routes = require('./app/routes/movimiento.routes');
 
 // Middlewares
 app.use(express.json());
@@ -25,7 +31,15 @@ app.use((req, res, next) => {
 });
 
 // Añadir prefijos a rutas / Cargar rutas
-app.use('/api', [api_routes]);
+app.use('/api',  [
+    ajustes_routes,
+    cargadorista_routes,
+    duenos_routes,
+    credito_routes,
+    cuenta_routes,
+    proveedor_routes,
+    movimiento_routes
+]);
 
 // Exportar modulo (fichero actual)
 module.exports = app;
